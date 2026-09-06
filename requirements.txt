@@ -1,0 +1,26 @@
+# Runtime dependencies for the JAX code in mid/ and small-datasets/.
+# The paper reports a separate PyTorch 1.13 environment; this file follows
+# the imports in the code snapshot shipped in this repository.
+
+# NumPy 2 removes np.float_, which is used throughout the environments and
+# replay buffers. JAX 0.6 removes the legacy jax.tree_map used by mid/.
+numpy>=1.21,<2.0
+scipy>=1.7,<2.0
+jax>=0.3.16,<0.6
+
+# Legacy Gym and pgmpy APIs used by the current source tree.
+gym>=0.22,<0.27
+pgmpy>=0.1.23,<1.0
+
+# Data processing, graph handling, metrics and progress reporting.
+pandas>=1.3,<3.0
+networkx>=2.6,<4.0
+scikit-learn>=1.0,<2.0
+tqdm>=4.62,<5.0
+
+# JAX neural-network and optimization stack.
+dm-haiku>=0.0.6,<0.1
+optax>=0.1,<0.3
+
+# Required by the graph-based model used in mid/.
+jraph>=0.0.6.dev0,<0.1

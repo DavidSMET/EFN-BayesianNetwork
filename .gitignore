@@ -1,0 +1,32 @@
+# Python caches and build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+build/
+dist/
+*.egg-info/
+
+# Virtual environments and local configuration
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Generated datasets, training outputs, checkpoints, and models
+data/
+output/
+models/
+checkpoints/
+training_states/
+*.npy
+*.npz
+*.pkl
+*.jsonl
+*.log
+
+# IDE and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
