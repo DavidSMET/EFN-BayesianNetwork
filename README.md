@@ -1,6 +1,15 @@
 # Entropic Flow Network for Bayesian Network Structure Learning
 
-This repository contains experimental code related to the paper **Entropic Flow Network for Bayesian Network Structure Learning**. The paper proposes the Entropic Flow Network (EFN), which introduces structural entropy into GFlowNet to jointly account for data faithfulness, structural uncertainty, and directed acyclicity. It also uses a window balance loss to improve the global search for candidate Bayesian network structures.
+This repository contains the implementation accompanying the paper **Entropic Flow Network for Bayesian Network Structure Learning**. The paper proposes the Entropic Flow Network (EFN), which introduces structural entropy into GFlowNet to jointly account for data faithfulness, structural uncertainty, and directed acyclicity. It also uses a window balance loss to improve the global search for candidate Bayesian network structures.
+
+## Paper Information
+
+- **Authors:** Jiahui Wang, Mingheng Jiao, Linchao Zhao, and Kun Yue
+- **Venue:** IEEE International Conference on Data Mining (ICDM 2026)
+- **Status:** Accepted
+- **Paper ID:** DM1428
+- **Acceptance rate:** 392 accepted papers from 1,966 submissions (19.94%)
+- **Conference website:** [IEEE ICDM 2026](http://icdm2026.neu.edu.cn/)
 
 > **Implementation note:** The complete experimental environment described in the paper uses PyTorch 1.13 and Python 3.8. The current repository snapshot is implemented with **JAX, Haiku, and Optax**. This README therefore distinguishes the method described in the paper from the code that is currently available. The accompanying `requirements.txt` follows the actual imports in this repository.
 
@@ -210,12 +219,14 @@ The numerical results in the paper should therefore be treated as reported paper
 
 The baseline DAG-GFlowNet code is derived from the [JAX DAG-GFlowNet implementation](https://github.com/tristandeleu/jax-dag-gflownet) by Tristan Deleu and collaborators. Benchmark networks are obtained from the [bnlearn Bayesian Network Repository](https://www.bnlearn.com/bnrepository/).
 
-The supplied manuscript is an anonymous UAI 2026 review submission and does not contain author information. Add the authors, publication information, and a permanent URL when they become available. Until then, the following temporary citation can be used:
+If you use this code or build on this work, please cite the accepted paper. The proceedings page, page range, and DOI will be added when they become available.
 
 ```bibtex
-@unpublished{anonymous2026efn,
+@inproceedings{wang2026entropic,
+  author    = {Jiahui Wang and Mingheng Jiao and Linchao Zhao and Kun Yue},
   title = {Entropic Flow Network for Bayesian Network Structure Learning},
-  note = {Submitted to the 42nd Conference on Uncertainty in Artificial Intelligence (UAI 2026), review manuscript},
-  year = {2026}
+  booktitle = {2026 IEEE International Conference on Data Mining (ICDM)},
+  year      = {2026},
+  note      = {Accepted paper, Paper ID DM1428}
 }
 ```
